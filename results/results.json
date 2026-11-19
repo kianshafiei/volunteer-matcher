@@ -1,0 +1,95 @@
+{
+  "n_profiles": 30,
+  "n_opportunities": 658,
+  "n_judgments": 603,
+  "summary": {
+    "Keyword (BM25)": {
+      "P@5": 0.64,
+      "nDCG@10": 0.632,
+      "MRR": 0.886,
+      "category P@5": 0.57,
+      "distinct orgs @10": 8.367,
+      "one-off share @10": 0.207,
+      "catalogue coverage": 0.353
+    },
+    "Semantic (MiniLM)": {
+      "P@5": 0.687,
+      "nDCG@10": 0.684,
+      "MRR": 0.89,
+      "category P@5": 0.593,
+      "distinct orgs @10": 8.4,
+      "one-off share @10": 0.13,
+      "catalogue coverage": 0.33
+    },
+    "Hybrid (RRF)": {
+      "P@5": 0.713,
+      "nDCG@10": 0.709,
+      "MRR": 0.91,
+      "category P@5": 0.593,
+      "distinct orgs @10": 8.133,
+      "one-off share @10": 0.147,
+      "catalogue coverage": 0.356
+    },
+    "Hybrid + preference + diversity": {
+      "P@5": 0.74,
+      "nDCG@10": 0.707,
+      "MRR": 0.944,
+      "category P@5": 0.585,
+      "distinct orgs @10": 9.2,
+      "one-off share @10": 0.173,
+      "catalogue coverage": 0.343
+    }
+  },
+  "bootstrap_nDCG": {
+    "hybrid minus bm25": {
+      "mean": 0.077,
+      "95% CI": [
+        0.009,
+        0.145
+      ],
+      "profiles improved / worse": [
+        21,
+        8
+      ]
+    },
+    "hybrid minus dense": {
+      "mean": 0.025,
+      "95% CI": [
+        -0.056,
+        0.109
+      ],
+      "profiles improved / worse": [
+        15,
+        15
+      ]
+    },
+    "full minus bm25": {
+      "mean": 0.075,
+      "95% CI": [
+        -0.002,
+        0.153
+      ],
+      "profiles improved / worse": [
+        20,
+        9
+      ]
+    },
+    "full minus hybrid": {
+      "mean": -0.002,
+      "95% CI": [
+        -0.054,
+        0.072
+      ],
+      "profiles improved / worse": [
+        5,
+        21
+      ]
+    }
+  },
+  "one-off request (q26), share of one-off results": {
+    "bm25": 0.2,
+    "dense": 0.1,
+    "hybrid": 0.0,
+    "full": 1.0
+  }
+}
